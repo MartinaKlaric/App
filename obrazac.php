@@ -7,35 +7,17 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="#" method="POST">
-        <table border="1">
-        <tr>
-            <th>Ime:</th>
-            <td><input type="text" name="firstname"></td>
-        </tr>
+    <form action="obrada.php" method="POST">
+        <p>
+            <label>Ime</label>
+            <input type="text" name="firstname" />
+        </p> 
+        <p>
+            <label>Prezime</label>
+            <input type="text" name="lastname" />
+        </p>    
+        <input type="submit" value="Pošalji" />
 
-        <tr>
-            <th>Prezime:</th>
-            <td><input type="text" name="lastname"></td>
-        </tr>
-
-        <tr>
-            <th>Email:</th>
-            <td><input type="text" name="email"></td>
-        </tr>
-
-        <tr>
-            <th>Lozinka:</th>
-            <td><input type="password" name="password"></td>
-        </tr>
-
-        <tr>
-          <td colspan="2">
-            <button type="submit">Pošalji!</button>
-            
-          </td>
-        </tr>
-        </table>
     </form>
 </body>
 </html>

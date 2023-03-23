@@ -1,0 +1,20 @@
+[
+    {
+        "word":"test",
+        "letters":"4",
+        "consonants":"3",
+        "vowels":"1"
+    },
+    {
+        "word":"plava",
+        "letters":"5",
+        "consonants":"3",
+        "vowels":"2"
+    },
+    {
+        "word":"ljubičasta",
+        "letters":"9",
+        "consonants":"5",
+        "vowels":"4"
+    }
+]
