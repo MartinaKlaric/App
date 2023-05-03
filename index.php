@@ -13,7 +13,7 @@ abstract class Car
 }
 
 
-class Kia extends Car implements Vehicle
+class Fiat extends Car implements Vehicle
 {
    public function getKmOnFullTank():int
    {
@@ -21,11 +21,11 @@ class Kia extends Car implements Vehicle
    }
    public function start(): void
    {
-      echo "Kia has started.\n";
+      echo "Fiat has started.\n";
    }
    public function stop(): void
    {
-      echo "Kia has stopped.\n";
+      echo "Fiat has stopped.\n";
    }
 }
 

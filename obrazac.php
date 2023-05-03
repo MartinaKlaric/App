@@ -7,17 +7,16 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="obrada.php" method="POST">
+    <form action="obrada.php" method="POST" enctype="multipart/form-data">
         <p>
-            <label>Ime</label>
-            <input type="text" name="firstname" />
+            <label>Odaberi file</label>
+            <input type="file" name="userfile" />
         </p> 
         <p>
-            <label>Prezime</label>
-            <input type="text" name="lastname" />
-        </p>    
-        <input type="submit" value="Pošalji" />
-
+            <label>Send file</label>
+            <input type="submit" name="sendfile" />
+        </p> 
+       
     </form>
 </body>
 </html>
