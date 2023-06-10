@@ -1,62 +1,26 @@
 <?php
 
-interface Vehicle
-{
-   public function start():void;
-   public function stop():void;
+use App\Videostore\Genre;
+
+include 'vendor/autoload.php';
+$databaseConfig = require './config/database.php'; //uključimo naš file u igru
+
+try {
+    $connection = new mysqli(
+        username: $databaseConfig['username'],
+        password: $databaseConfig['password'],
+        database: 'videoteka');
+    
+} catch (\Throwable $th) {
+    echo "Error while connecting to the database\n";                   
+
+    return; 
 }
 
-abstract class Car
-{
-   public function __construct(protected int $tankCapacity){}
-   abstract function getKmOnFullTank():int;
+try {
+    $connection->begin_transaction(); //pokreni transakciju
+    $connection->query("INSERT INTO zanr(Naziv) VALUES ('Dokumentarni')"); //dodaj zanr Dokumentarni
+    $connection->commit(); //komitaj ...dok ovo ne pokrenem neće se u bazu ništa dodati
+} catch (\Throwable $th) {
+    $connection->rollback();
 }
-
-
-class Fiat extends Car implements Vehicle
-{
-   public function getKmOnFullTank():int
-   {
-      return $this->tankCapacity*18;
-   }
-   public function start(): void
-   {
-      echo "Fiat has started.\n";
-   }
-   public function stop(): void
-   {
-      echo "Fiat has stopped.\n";
-   }
-}
-
-class Audi extends Car implements Vehicle
-{
-   public function getKmOnFullTank():int
-   {
-      return $this->tankCapacity*20;
-   }
-   public function start(): void
-   {
-      echo "Audi has started.\n";
-   }
-   public function stop(): void
-   {
-      echo "Audi has stopped.\n";
-   }
-}
-
-class Avion implements Vehicle
-{
-   public function start(): void
-   {
-      echo "Avion has started.\n";
-   }
-   public function stop(): void
-   {
-      echo "Avion has stopped.\n";
-   }
-}
-
-
-
-   
