@@ -16,7 +16,7 @@ class Circle implements Drawable
         }
     }
 
-    public function getExtent(): int
+    public function getExtent(): float
     {
         return 2 * $this->radius * Konstante::PI;
     }
