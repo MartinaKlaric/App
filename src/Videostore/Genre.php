@@ -7,7 +7,7 @@ class Genre
      public function __construct(private string $Naziv) 
      {}
 
-     public function getName($isUpperCaseRequest=false): string 
+     public function getName(bool $isUpperCaseRequest=false): string 
      {
         if ($isUpperCaseRequest){
               return strtoupper($this->Naziv);

@@ -1,0 +1,19 @@
+<phpunit bootstrap="vendor/autoload.php" colors="true">  
+   <testsuites> 
+       <testsuite name="app">   
+          <directory>test</directory>
+       </testsuite> 
+   </testsuites>  
+
+   <coverage includeUncoveredFiles="true" pathCoverage="false"
+   ignoreDeprecatedCodeUnits="true" disableCodeCoverageIgnore="true">
+      <include>
+        <directory suffix=".php">src</directory>
+      </include>
+      <report>
+        <html outputDirectory="test/coverage" lowUpperBound="50" highLowerBound="90"/>
+      </report>       
+   </coverage>           
+</phpunit> 
+
+
