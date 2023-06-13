@@ -3,3 +3,4 @@ vendor/
 config/database.php
 .phpunit.result.cache
 /test/coverage/
+config/databaseParcijalni.php
