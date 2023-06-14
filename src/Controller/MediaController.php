@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Controller;
+use App\Model\Media;
 
 class MediaController
 {
